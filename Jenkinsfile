@@ -14,6 +14,7 @@ pipeline {
     stage('Copy Artifact') {
       steps {
         bat 'cd'
+	bat 'del docker\\spring-petclinic-2.2.0.BUILD-SNAPSHOT.jar'
         bat 'xcopy /S target\\*.jar docker\\'
       }
     }
